@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+echo "-----> Installing avconv"
+mkdir /chgol
+echo "dir created"
+# download the binary (-O) silently (-s)
+cd /chgol && { curl https://s3-us-west-2.amazonaws.com/marmoset-libav/libav-release-64bit-static.tar.xz -s -O -L }
+echo "downloaded"
+# untar the binary to the directory we want
+tar -C vendor -xvf libav-release-64bit-static.tar.xz
+mv /chgol/libav-12-64bit-static/avconv ./bin/avconv
