@@ -9,7 +9,7 @@ echo "after curl"
 # untar the binary to the directory we want
 tar -C vendor -xvf avconv.tar.gz
 echo "after tar"
-mv ./vendor/bin/avconv /bin/avconv
+mv ./vendor/bin/avconv /tmp/bin/avconv
 echo "after mv"
 var=$(pwd)
 echo "The current working directory $var."
