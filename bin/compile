@@ -2,12 +2,12 @@
 
 echo "-----> Installing avconv"
 mkdir vendor
-echo "dir created"
+echo "after mkdir"
 # download the binary (-O) silently (-s)
 curl https://github.com/CrowdDevelopment/avconv-binary/raw/master/avconv.tar.gz -s -O -L
-echo "downloaded"
+echo "after curl"
 # untar the binary to the directory we want
-tar -C vendor -xvf libav-release-64bit-static.tar.xz
-echo "untared"
-mv ./vendor/libav-12-64bit-static/avconv ./bin/avconv
-echo "file moved"
+tar -C vendor -xvf avconv.tar.gz
+echo "after tar"
+mv ./vendor/bin/avconv ./bin/avconv
+echo "after mv"
