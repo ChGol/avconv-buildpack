@@ -2,7 +2,7 @@
 
 echo "-----> Installing avconv"
 mkdir vendor
-mkdir /app/.heroku/vendor
+# mkdir /app/.heroku/vendor
 echo "after mkdir"
 # download the binary (-O) silently (-s)
 curl https://github.com/CrowdDevelopment/avconv-binary/raw/master/avconv.tar.gz -s -O -L
@@ -10,7 +10,7 @@ echo "after curl"
 # untar the binary to the directory we want
 tar -C vendor -xvf avconv.tar.gz
 echo "after tar"
-mv ./vendor/bin/avconv /app/.heroku/vendor/avconv
+# mv ./vendor/bin/avconv /app/.heroku/vendor/avconv
 echo "after mv"
 var=$(pwd)
 echo "The current working directory $var."
